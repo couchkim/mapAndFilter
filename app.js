@@ -74,9 +74,25 @@ console.log(containsVowel('hey'));
 
 console.log("Divisors");
 
+function range(min, max) {
+  let arr = [];
+  
+  for (let i = min; i <= max; i++) {
+    arr.push(i);
+  }
+  
+  return arr;
+}
 
+function divisors(num1){
+    function modulus(current){
+        return num1 % current === 0
+    }
+    let nums = range(1, num1).filter(modulus);
+    return nums;
+}
 
-
+console.log(divisors(100));
 
 console.log("Multiples");
 
